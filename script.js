@@ -11,7 +11,35 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeNavigation()
   initializeScrollAnimations()
   initializeContactForm()
+  initializeInPageSmoothScroll()
 })
+
+// Enable smooth scroll only for same-page anchor clicks.
+function initializeInPageSmoothScroll() {
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a')
+    if (!anchor) return
+    const href = anchor.getAttribute('href')
+    if (!href) return
+
+    // Only handle same-page anchors (either '#id' or current path + #id)
+    try {
+      const url = new URL(href, location.href)
+      if (url.origin !== location.origin) return
+      if (url.pathname === location.pathname && url.hash) {
+        const target = document.querySelector(url.hash)
+        if (target) {
+          e.preventDefault()
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          // update the address bar
+          history.pushState(null, '', url.hash)
+        }
+      }
+    } catch (err) {
+      // ignore invalid URLs
+    }
+  })
+}
 
 // Network Animation
 function initializeNetworkAnimation() {
@@ -59,18 +87,35 @@ class NetworkAnimation {
   }
 
   resizeCanvas() {
-    this.canvas.width = window.innerWidth
-    this.canvas.height = window.innerHeight
+    // Use devicePixelRatio to make the canvas crisp on high-DPI screens
+    const dpr = window.devicePixelRatio || 1
+
+    // store logical (CSS) size for particle math
+    this.width = window.innerWidth
+    this.height = window.innerHeight
+
+    // set backing store size in device pixels
+    this.canvas.width = Math.floor(this.width * dpr)
+    this.canvas.height = Math.floor(this.height * dpr)
+
+    // keep CSS size equal to viewport so clientX/clientY map correctly
+    this.canvas.style.width = `${this.width}px`
+    this.canvas.style.height = `${this.height}px`
+
+    // reset any transforms then scale to device pixel ratio so drawing uses CSS pixels
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
   }
 
   createParticles() {
-    const particleCount = Math.floor((this.canvas.width * this.canvas.height) / 15000)
+    // Use logical (CSS) pixel sizes for particle positions and counts
+    const area = this.width * this.height
+    const particleCount = Math.max(20, Math.floor(area / 15000))
     this.particles = []
 
     for (let i = 0; i < particleCount; i++) {
       this.particles.push({
-        x: Math.random() * this.canvas.width,
-        y: Math.random() * this.canvas.height,
+        x: Math.random() * this.width,
+        y: Math.random() * this.height,
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         radius: Math.random() * 2 + 1,
@@ -83,15 +128,15 @@ class NetworkAnimation {
       particle.x += particle.vx
       particle.y += particle.vy
 
-      if (particle.x < 0 || particle.x > this.canvas.width) {
+      if (particle.x < 0 || particle.x > this.width) {
         particle.vx *= -1
       }
-      if (particle.y < 0 || particle.y > this.canvas.height) {
+      if (particle.y < 0 || particle.y > this.height) {
         particle.vy *= -1
       }
 
-      particle.x = Math.max(0, Math.min(this.canvas.width, particle.x))
-      particle.y = Math.max(0, Math.min(this.canvas.height, particle.y))
+      particle.x = Math.max(0, Math.min(this.width, particle.x))
+      particle.y = Math.max(0, Math.min(this.height, particle.y))
     })
   }
 

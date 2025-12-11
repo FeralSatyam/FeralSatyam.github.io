@@ -26,8 +26,17 @@
                     <a href="#skills" class="nav-link">Skills</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
                     <a href="#projects" class="nav-link">Projects</a>
                 </li>
+                <li class="nav-item">
+                    <a href="#certificates" class="nav-link">Certificates</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#blogs" class="nav-link">Blogs</a>
+                </li> -->
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
@@ -46,11 +55,11 @@
         <section id="home" class="hero-section">
             <canvas id="networkCanvas"></canvas>
             <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Satyam Rana</span></h1>
-                <p class="hero-subtitle">
-                    <span id="typed-text">Student & Aspiring Developer</span>
-                    <span class="cursor">|</span>
-                </p>
+                    <h1 class="hero-title">Hi I am <span class="highlight">Satyam Rana</span></h1>
+                    <p class="hero-subtitle">
+                        <span id="typed-text">Student & Aspiring Developer</span>
+                        <span class="cursor">|</span>
+                    </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="Satyam_Rana_Cv.pdf" download class="btn btn-secondary">Download Cv</a>
@@ -78,7 +87,7 @@
                         <p>Hi! I'm Satyam Rana, a passionate learner focused on programming, AI, and problem-solving. I love exploring new technologies and creating innovative solutions.</p>
                         <p>Currently pursuing Computer Science with Artificial Intelligence, I'm constantly driven by curiosity and embrace new challenges to stay ahead in the tech world.</p>
                         
-                        <div class="about-stats">
+                        <!-- <div class="about-stats">
                             <div class="stat">
                                 <h3>9+</h3>
                                 <p>Projects</p>
@@ -87,7 +96,7 @@
                                 <h3>3+</h3>
                                 <p>Years Learning</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="about-image">
                         
@@ -101,47 +110,58 @@
         <section id="skills" class="section">
             <div class="container">
                 <h2 class="section-title">Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <div class="skills-list">
-                            <div class="skill-tag">C</div>
-                            <div class="skill-tag">Python</div>
-                            <div class="skill-tag">JavaScript</div>
-                            <div class="skill-tag">PHP</div>
+                        <div class="skills-panel">
+                            <div class="skills-column">
+                                <h3>Programming</h3>
+                                <ul class="skill-list-modern">
+                                    <li class="skill-item"><i class="fas fa-code"></i><span class="skill-name">C</span></li>
+                                    <li class="skill-item"><i class="fab fa-python"></i><span class="skill-name">Python</span></li>
+                                    <li class="skill-item"><i class="fab fa-js"></i><span class="skill-name">JavaScript</span></li>
+                                    <li class="skill-item"><i class="fab fa-php"></i><span class="skill-name">PHP</span></li>
+                                </ul>
+                            </div>
+                            <div class="skills-column">
+                                <h3>Web / Backend</h3>
+                                <ul class="skill-list-modern">
+                                    <li class="skill-item"><i class="fab fa-html5"></i><span class="skill-name">HTML</span></li>
+                                    <li class="skill-item"><i class="fab fa-css3-alt"></i><span class="skill-name">CSS</span></li>
+                                    <li class="skill-item"><i class="fab fa-react"></i><span class="skill-name">React</span></li>
+                                    <li class="skill-item"><i class="fab fa-node-js"></i><span class="skill-name">Node.js</span></li>
+                                    <li class="skill-item"><i class="fas fa-database"></i><span class="skill-name">MongoDB</span></li>
+                                </ul>
+                            </div>
+                            <div class="skills-column">
+                                <h3>Data / Tools</h3>
+                                <ul class="skill-list-modern">
+                                    <li class="skill-item"><i class="fas fa-chart-line"></i><span class="skill-name">NumPy</span></li>
+                                    <li class="skill-item"><i class="fas fa-table"></i><span class="skill-name">Pandas</span></li>
+                                    <li class="skill-item"><i class="fab fa-git-alt"></i><span class="skill-name">Git</span></li>
+                                    <li class="skill-item"><i class="fab fa-github"></i><span class="skill-name">GitHub</span></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Web Technologies</h3>
-                        <div class="skills-list">
-                            <div class="skill-tag">HTML</div>
-                            <div class="skill-tag">CSS</div>
-                            <div class="skill-tag">React</div>
-                            <div class="skill-tag">Express Js</div>
-                            <div class="skill-tag">Node Js</div>
-                            <div class="skill-tag">Mongo DB</div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-grid">
+                            <div class="experience-card">
+                                <div class="experience-left">
+                                    <h3>Codynn</h3>
+                                    <p class="role"><i class="fas fa-briefcase" aria-hidden="true"></i> Research and Technical Content Writer</p>
+                                    <p class="time"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Feb 2024 - Jul 2024</p>
+                                    <ul class="experience-list">
+                                        <li>Created beginner to advanced C programming courses and tutorials.</li>
+                                        <li>Designed coding challenges to enhance problem-solving skills.</li>
+                                        <li>Produced project-based educational videos for learners.</li>
+                                        <li>Conducted technical research to support content development.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Frameworks & Libraries</h3>
-                        <div class="skills-list">
-                            
-                            <div class="skill-tag">Numpy</div>
-                            <div class="skill-tag">Pandas</div>
-                            
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
-                        <div class="skills-list">
-                            
-                            
-                            <div class="skill-tag">Git</div>
-                            <div class="skill-tag">GitHub</div>
-                            <div class="skill-tag">OOP</div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -150,22 +170,21 @@
             <div class="container">
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="projects-grid">
+                    <!-- Show top 3 featured projects -->
                     <div class="project-card">
                         <div class="project-image">
                             <img src="images/SmartRoute.png" alt="SmartRoute">
                         </div>
                         <div class="project-content">
-                            <h3>SmartRoute: Ai based Automated Traffic Management System (Codarambha Hackfest 2025)</h3>
-                            <p>Uses YOLOv8 to detect vehicles and density to give the optimal green signal to preferred lane.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python, YOLO, Flask</span>
+                            <h3>SmartRoute: AI Traffic Management</h3>
+                            <p>YOLOv8-based vehicle detection and adaptive signal timing.</p>
+                            <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">YOLO</span></div>
+                            <div class="project-actions">
+                                <a href="https://github.com/FeralSatyam/Codarambha_Quantum-Coders" target="_blank" class="btn btn-primary">View Project</a>
+                                <a href="projects/smartroute.html" class="btn btn-secondary">Read More</a>
                             </div>
-                            <a href="https://github.com/FeralSatyam/Codarambha_Quantum-Coders" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                         </div>
                     </div>
-                    
 
                     <div class="project-card">
                         <div class="project-image">
@@ -173,145 +192,104 @@
                         </div>
                         <div class="project-content">
                             <h3>Weather Prediction AI Model</h3>
-                            <p>Predicts if it will rain or not and forecasts temperature and humidity.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python, Numpy, Pandas, ScikitLearn</span>
+                            <p>Predicts rainfall probability and forecasts temperature/humidity.</p>
+                            <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Scikit-Learn</span></div>
+                            <div class="project-actions">
+                                <a href="https://github.com/FeralSatyam/Rain-Prediction-and-Humidity-Temperature-forecasting-AI-model" target="_blank" class="btn btn-primary">View Project</a>
+                                <a href="projects/weather-prediction.html" class="btn btn-secondary">Read More</a>
                             </div>
-                            <a href="https://github.com/FeralSatyam/Rain-Prediction-and-Humidity-Temperature-forecasting-AI-model" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/SimpleSocialBackendPP.png" alt="SmartRoute">
+                            <img src="images/SimpleSocialBackendPP.png" alt="Simple Social Backend">
                         </div>
                         <div class="project-content">
                             <h3>Simple Social Backend</h3>
-                            <p>Users can create account, login, add posts, edit posts, like posts and the passwords are hashed.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Express Js, MongoDB, Node JS</span>
+                            <p>Auth, posts CRUD, and likes using Express & MongoDB.</p>
+                            <div class="project-tech"><span class="tech-tag">Express</span><span class="tech-tag">MongoDB</span></div>
+                            <div class="project-actions">
+                                <a href="https://github.com/FeralSatyam/Simple-Social-Backend" target="_blank" class="btn btn-primary">View Project</a>
+                                <a href="projects/simple-social-backend.html" class="btn btn-secondary">Read More</a>
                             </div>
-                            <a href="https://github.com/FeralSatyam/Simple-Social-Backend" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://i.ibb.co/MxvqY7FZ/study-timer.png" alt="Study Timer">
-                        </div>
-                        <div class="project-content">
-                            <h3>Study Timer</h3>
-                            <p>Calm UI with a digital clock and stop watch with rain music.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                            </div>
-                            <a href="https://github.com/FeralSatyam/Study-Timer.git" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://i.ibb.co/JWR12wwd/todo.png" alt="Todo List App">
-                        </div>
-                        <div class="project-content">
-                            <h3>Todo List App</h3>
-                            <p>Simple todo list app, where you can add, remove and move tasks.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                            </div>
-                            <a href="https://github.com/FeralSatyam/Todo-List-App.git" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://i.ibb.co/1tcHgpS3/caesar.png" alt="Caesar Cipher">
-                        </div>
-                        <div class="project-content">
-                            <h3>Caesar Cipher Implementation</h3>
-                            <p>Classic encryption algorithm implemented in C programming language.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">C</span>
-                          </div>
-                            <a href="https://github.com/FeralSatyam/Caesar-Cipher-Implementation-in-C.git" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://i.ibb.co/fVrmRJxH/scrabble.png" alt="Scrabble Calculator">
-                        </div>
-                        <div class="project-content">
-                            <h3>Scrabble Word Score Calculator</h3>
-                            <p>Calculate word scores for the popular Scrabble board game.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">C</span>
-                            </div>
-                            <a href="https://github.com/FeralSatyam/Scrabble-Word-Score-Calculator-C-Implementation-.git" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://i.ibb.co/qYv092N1/File-MIME-Type.png" alt="File MIME Type Checker">
-                        </div>
-                        <div class="project-content">
-                            <h3>File MIME Type Checker</h3>
-                            <p>Utility to identify file types based on their MIME signatures.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                            </div>
-                            <a href="https://github.com/FeralSatyam/File-MIME-Type-Checker.git" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://i.ibb.co/BHJ4JJn0/cash.png" alt="Greedy Algorithm">
-                        </div>
-                        <div class="project-content">
-                            <h3>Greedy Algorithm - Minimum Coins</h3>
-                            <p>Efficient algorithm to find minimum coins for making change.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">C</span>
-                            </div>
-                            <a href="https://github.com/FeralSatyam/Greedy-Algorithm---Minimum-Coins-for-Change-C-Implementation-.git" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://i.ibb.co/LhtYqHst/tip.png" alt="Tip Calculator">
-                        </div>
-                        <div class="project-content">
-                            <h3>Tip Calculator</h3>
-                            <p>Simple and efficient tip calculator for restaurant bills.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">C</span>
-                            </div>
-                            <a href="https://github.com/FeralSatyam/Tip-Calculator.git" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                         </div>
                     </div>
                 </div>
+
+                <div style="text-align:center; margin-top:2rem;">
+                    <a href="projects/all-projects.html" class="btn btn-primary">View More Projects</a>
+                </div>
             </div>
         </section>
+
+        <!-- Certifications Section -->
+        <section id="certificates" class="section">
+            <div class="container">
+                <h2 class="section-title">Certificates</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image"><img src="images/certificates/Joining Data with Pandas - Datacamp.png" alt="Certificate 1"></div>
+                        <div class="project-content">
+                            <h3>Joining Data With Pandas</h3>
+                            <p>Datacamp - 2025</p>
+                            <div class="project-actions"><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/ddca751b5ba318dabc09ef4ae07f2b3948472d8e" class="btn btn-secondary" target="_blank">View</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"><img src="images/certificates/Data Manupulation with pandas - datacamp.png" alt="Certificate 2"></div>
+                        <div class="project-content">
+                            <h3>Data Manipulation with Pandas</h3>
+                            <p>Datacamp - 2025</p>
+                            <div class="project-actions"><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/628c7cecb7a25d9ac9821464ab965114b9b0e633" class="btn btn-secondary" target="_blank">View</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"><img src="images/certificates/Intermediate Python.png" alt="Certificate 3"></div>
+                        <div class="project-content">
+                            <h3>Intermedaite Python</h3>
+                            <p>Datacamp - 2025</p>
+                            <div class="project-actions"><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/83e8dc83f4791cca3115f725d51357757cd2d34c" class="btn btn-secondary">View</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align:center; margin-top:1.5rem;"><a href="projects/certificates.html" class="btn btn-primary">View More Certificates</a></div>
+            </div>
+        </section>
+
+        <!-- Blogs & Research Section
+        <section id="blogs" class="section">
+            <div class="container">
+                <h2 class="section-title">Blogs & Research</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image"><img src="images/blog1.png" alt="Blog 1"></div>
+                        <div class="project-content">
+                            <h3>Blog Post A</h3>
+                            <p>Short excerpt from blog or research note.</p>
+                            <div class="project-actions"><a href="projects/blogs.html" class="btn btn-secondary">Read</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"><img src="images/blog2.png" alt="Blog 2"></div>
+                        <div class="project-content">
+                            <h3>Blog Post B</h3>
+                            <p>Short excerpt from blog or research note.</p>
+                            <div class="project-actions"><a href="projects/blogs.html" class="btn btn-secondary">Read</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"><img src="images/blog3.png" alt="Blog 3"></div>
+                        <div class="project-content">
+                            <h3>Blog Post C</h3>
+                            <p>Short excerpt from blog or research note.</p>
+                            <div class="project-actions"><a href="projects/blogs.html" class="btn btn-secondary">Read</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align:center; margin-top:1.5rem;"><a href="projects/blogs.html" class="btn btn-primary">View More Blogs</a></div>
+            </div>
+        </section> -->
 
         <!-- Contact Section -->
         <section id="contact" class="section">
