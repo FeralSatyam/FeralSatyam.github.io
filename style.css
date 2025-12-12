@@ -1514,6 +1514,63 @@ main {
   margin-right: 0.6rem;
 }
 
+.detail-content h4 i {
+  color: #00d4aa;
+  margin-right: 0.5rem;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+/* Tech tag icon and spacing */
+.project-tech {
+  margin: 0.6rem 0 1rem 0;
+}
+.project-tech .tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.project-tech .tech-tag i {
+  color: #00d4aa;
+  min-width: 18px;
+}
+
+/* Vertical spacing inside detail content */
+.detail-content h3,
+.detail-content p,
+.detail-content h4,
+.detail-content ul,
+.detail-content .project-actions {
+  margin-bottom: 0.9rem;
+}
+
+/* Increase left offset for feature lists so they sit more to the right of the "Features" heading */
+.detail-content ul {
+  margin-left: 2rem; /* push list right relative to heading */
+  padding-left: 0; /* reset default padding to use custom marker */
+  list-style: none; /* remove default bullets so we can use a styled marker */
+}
+
+.detail-content ul li {
+  margin-bottom: 0.6rem; /* extra vertical spacing between feature items */
+}
+
+/* Custom dot marker for feature list items */
+.detail-content ul li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #00d4aa;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  margin-left: -1.2rem; /* pull marker into the left gutter */
+  margin-top: 6px;
+}
+
+
 /* project detail pages keep stacked layout on all viewports */
 
 /* Modern skills list UI */
